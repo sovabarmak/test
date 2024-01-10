@@ -4,8 +4,7 @@ on:
     branches:
      - main
 jobs:
-automerge:
-    update-cms-master:
+  update-cms-master:
     name: Merge master into release after a PR is merged
     runs-on: ubuntu-latest
     steps:
@@ -16,6 +15,6 @@ automerge:
         id: merge
         with:
           github_token: ${{ github.token }}
-          source: 'master'
-          target: 'release'
+          source: 'main'
+          target: 'stage'
           webhook_url: #if present add the Slack webhook
