@@ -12,4 +12,5 @@ jobs:
         uses: mheap/cascading-merge-action@v1
         with:
           branches: |
+            main
             stage
