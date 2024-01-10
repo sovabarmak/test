@@ -9,9 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cascading Merge
-        uses: PerformLine/cascading-merge-action@master
+        uses: mheap/cascading-merge-action@v1.0.1
         with:
           # Changes to `branch-1` will automatically be merged into `branch-2` and `branch-3`
           branches: |
             main
             stage
+          token: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
