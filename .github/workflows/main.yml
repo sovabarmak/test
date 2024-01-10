@@ -4,13 +4,18 @@ on:
     branches:
      - main
 jobs:
-  cascading-merge:
-    name: Cascading Merge
+automerge:
+    update-cms-master:
+    name: Merge master into release after a PR is merged
     runs-on: ubuntu-latest
     steps:
-      - name: Cascading Merge
-        uses: mheap/cascading-merge-action@v1.0.1
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: merge
+        uses: mtanzi/action-automerge@v1
+        id: merge
         with:
-          branches: |
-            main
-            stage
+          github_token: ${{ github.token }}
+          source: 'master'
+          target: 'release'
+          webhook_url: #if present add the Slack webhook
