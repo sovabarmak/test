@@ -12,6 +12,7 @@ jobs:
         uses: mheap/cascading-merge-action@v1.0.1
         with:
           # Changes to `branch-1` will automatically be merged into `branch-2` and `branch-3`
+          token: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
           branches: |
             main
             stage
