@@ -16,4 +16,3 @@ jobs:
           branches: |
             main
             stage
-          token: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
