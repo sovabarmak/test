@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cascading Merge
-        uses: sovabarmak/cascading-merge-action
+        uses: PerformLine/cascading-merge-action@master
         with:
           # Changes to `branch-1` will automatically be merged into `branch-2` and `branch-3`
           branches: |
