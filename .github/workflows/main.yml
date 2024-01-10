@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cascading Merge
-        uses: mheap/cascading-merge-action@v1
+        uses: mheap/cascading-merge-action@v1.0.1
         with:
           branches: |
             main
