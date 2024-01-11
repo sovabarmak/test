@@ -18,13 +18,15 @@ jobs:
             main
             stage
     
-    # some sep text
   cascading-merge2:
     permissions: write-all
     name: Cascading Merge2
     runs-on: ubuntu-latest
-    uses: mheap/cascading-merge-action@v1.0.1
-    secrets:
+    steps:
+      - name: Cascading Merge2
+      uses: mheap/cascading-merge-action@v1.0.1
+      with:
+      # Changes to `branch-1` will automatically be merged into `branch-2` and `branch-3`
       token: ${{ github.token }}
       branches: |
         main
