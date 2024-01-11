@@ -17,8 +17,9 @@ jobs:
           branches: |
             main
             stage
-            
-    cascading-merge2:
+    
+    # some sep text
+    cascading-merge:
         permissions: write-all
         name: Cascading Merge2
         runs-on: ubuntu-latest
