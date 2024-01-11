@@ -18,12 +18,12 @@ jobs:
             main
             stage
             
-    cascading-merge:
+    cascading-merge2:
         permissions: write-all
-        name: Cascading Merge
+        name: Cascading Merge2
         runs-on: ubuntu-latest
         steps:
-          - name: Cascading Merge
+          - name: Cascading Merge2
             uses: mheap/cascading-merge-action@v1.0.1
             with:
               # Changes to `branch-1` will automatically be merged into `branch-2` and `branch-3`
