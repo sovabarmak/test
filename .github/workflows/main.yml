@@ -17,6 +17,9 @@ jobs:
           branches: |
             main
             stage
+      - name: Cascading Merge2
+        uses: mheap/cascading-merge-action@v1.0.1
+        with:
           branches: |
             main
             dev
