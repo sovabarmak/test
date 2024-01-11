@@ -24,7 +24,7 @@ jobs:
     name: Cascading Merge2
     runs-on: ubuntu-latest
     secrets:
-       token: ${{ github.token }}
-        branches: |
-            main
-            dev
+      token: ${{ github.token }}
+      branches: |
+        main
+        dev
