@@ -20,13 +20,15 @@ jobs:
        
       # merge github dev to stage
       - name: Cascading Merge2
+        continue-on-error: true
         uses: mheap/cascading-merge-action@v1.0.1
         with:
           branches: |
             main
             dev
-  - name: Failed Cascade merge
-    uses: JasonEtco/create-an-issue@v2
-    with:
-      title: Someone just pushed
-      assignees: ${{github.GITHUB_ACTOR}}
+      - name: Failed Cascade merge
+        continue-on-error: true
+        uses: JasonEtco/create-an-issue@v2
+        with:
+          title: Someone just pushed
+          assignees: ${{github.GITHUB_ACTOR}}
