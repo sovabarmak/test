@@ -33,17 +33,3 @@ jobs:
           branches: |
             main
             dev
-      - name: Deploy to WP Engine fom git stage to wpe stage
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: Deploy to WP Engine stage
-          repo: ${{ github.repository }}
-          token: ${{ github.token }}
-          ref: refs/heads/stage
-      - name: Deploy to WP Engine fom git dev to wpe dev
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: Deploy to WP Engine dev
-          repo: ${{ github.repository }}
-          token: ${{ github.token }}
-          ref: refs/heads/dev
