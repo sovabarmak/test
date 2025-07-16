@@ -29,4 +29,4 @@ jobs:
         uses: JasonEtco/create-an-issue@v2
         with:
           title: Someone just pushed
-          assignees: ${{GITHUB_ACTOR}}
+          assignees: ${{github.GITHUB_ACTOR}}
