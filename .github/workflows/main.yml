@@ -26,7 +26,7 @@ jobs:
             main
             dev
       - name: Failed Cascade merge
-      - uses: JasonEtco/create-an-issue@v2
+        uses: JasonEtco/create-an-issue@v2
         with:
           title: Someone just pushed
           assignees: ${{GITHUB_ACTOR}}
