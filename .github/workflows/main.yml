@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Failed Cascade merge
         uses: JasonEtco/create-an-issue@v2
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           title: Someone just pushed
           assignees: ${{github.GITHUB_ACTOR}}   
