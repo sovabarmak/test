@@ -1,4 +1,4 @@
-name: Deploy to WP Engine and push to dev and live
+name: Deploy to WP Engine
 on:
   push:
     branches:
@@ -9,18 +9,18 @@ jobs:
     name: Cascading Merge
     runs-on: ubuntu-latest
     steps:
+      # merge github main to stage
       - name: Cascading Merge
         uses: mheap/cascading-merge-action@v1.0.1
-        with:
-          # Changes to `branch-1` will automatically be merged into `branch-2` and `branch-3`
+        with:      
           token: ${{ github.token }}
           branches: |
             main
             stage
+      # merge github dev to stage
       - name: Cascading Merge2
         uses: mheap/cascading-merge-action@v1.0.1
         with:
           branches: |
             main
             dev
-      
