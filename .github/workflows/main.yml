@@ -9,10 +9,6 @@ jobs:
     name: Cascading Merge
     runs-on: ubuntu-latest
     steps:
-      - name: Failed Cascade merge
-        uses: JasonEtco/create-an-issue@v2
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
       # merge github main to stage
       - name: Cascading Merge
         uses: mheap/cascading-merge-action@v1.0.1
