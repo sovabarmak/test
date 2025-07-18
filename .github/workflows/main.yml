@@ -11,17 +11,16 @@ jobs:
     steps:
       # merge github main to stage
       - name: Cascading Merge
-        uses: sovabarmak/cascading-merge-action@v1.0.14
+        uses: sovabarmak/cascading-merge-action@v1.0.15
         with:      
           token: ${{ github.token }}
-          GITHUB_ACTOR : ${GITHUB_ACTOR}
           branches: |
             main
             stage
        
       # merge github dev to stage
       - name: Cascading Merge2
-        uses: sovabarmak/cascading-merge-action@v1.0.14
+        uses: sovabarmak/cascading-merge-action@v1.0.15
         with:
           branches: |
             main
